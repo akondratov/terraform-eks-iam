@@ -12,6 +12,9 @@ terraform {
     local = {
       version = "~> 2.1.0"
     }
+    tls = {
+      version = "~> 3.1.0"
+    }
   }
   required_version = "~> v0.15.3"
 }

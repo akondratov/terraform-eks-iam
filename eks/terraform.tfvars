@@ -8,8 +8,8 @@ worker_groups = [
   {
     name                = "on-demand-1"
     instance_type       = "t3.micro"
-    asg_max_size        = 1
-    asg_min_size        = 1
+    asg_max_size        = 2
+    asg_min_size        = 2
     kubelet_extra_args  = "--node-labels=spot=false"
     suspended_processes = ["AZRebalance"]
     root_volume_size    = "20"
@@ -77,12 +77,3 @@ worker_groups = [
 #     ]
 #   },
 # ]
-
-
-map_users = [
-  {
-    userarn  = "arn:aws:iam::1234567890:user/cicd"
-    username = "cicd"
-    groups   = ["system:masters"]
-  },
-]
